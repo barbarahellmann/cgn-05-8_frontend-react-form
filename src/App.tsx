@@ -1,12 +1,19 @@
 import {ChangeEvent, FormEvent, useState} from 'react'
 import './App.css'
-
+import * as yup from "yup"
 
 type Input = {
     name: string,
-    age: string
+    age: string,
     email: string
 }
+
+
+const inputSchema = yup.object().shape( {
+    name: yup.string().required("Name is required").min(2, "Name needs to be at least 2 characters"),
+    age: yup.number().required("Age is required").positive("Age must be at least 18 years"),
+    email: yup.string().email('Invalid email').required('Email is required')
+})
 function App() {
 
 
