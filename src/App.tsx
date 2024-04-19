@@ -23,7 +23,7 @@ function App() {
     <>
     <h1>Simple Form with Yup Validation</h1>
         <form>
-            <label>htmlFor={"name"}>Name</label>
+            <label htmlFor={"name"}> Name</label>
             <input onChange={handleOnChange} type={"text"} id={"name"} name={"name"}/>
         </form>
     </>
