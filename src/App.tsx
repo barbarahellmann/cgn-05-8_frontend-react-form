@@ -40,7 +40,7 @@ function App() {
   return (
     <>
     <h1>Simple Form with Yup Validation</h1>
-        <form>
+        <form onSubmit={handleOnSubmit}>
             <div>
                 <label htmlFor={"name"}> Name</label>
                 <input onChange={handleOnChangeName} type={"text"} id={"name"} name={"name"} value={formData.name}/>
